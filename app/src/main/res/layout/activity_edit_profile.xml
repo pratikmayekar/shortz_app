@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:background="@color/shortz_background_grey"
+
+    tools:context="seproject.pratikninadmayekar.shortz.EditProfile">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="38dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/shortz_logo" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile_string"
+            android:fontFamily="@font/seguisb"
+            android:textColor="@color/shortz_grey"
+            android:layout_margin="15dp"
+            android:textSize="24dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/profile_image_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/shortz_grey"
+                android:text="No Image Attached"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/seguisli"
+                android:textSize="@dimen/regular_text_size"
+                android:layout_alignParentLeft="true" />
+
+            <Button
+                style="@style/grey_button_style"
+                android:text="@string/upload_image_string"
+                android:id="@+id/upload_image_button"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/shortz_grey"
+                android:text="Name"
+                android:layout_marginTop="17dp"/>
+
+            <EditText
+                android:id="@+id/entered_new_name"
+                style="@style/edit_text_style"
+                android:layout_width="210dp"
+                android:layout_alignParentRight="true"
+                android:hint="Full Name"
+                android:inputType="text"
+                android:textColorHint="@color/hint_grey"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/shortz_grey"
+                android:text="Branch"
+                android:layout_marginTop="17dp"/>
+
+
+            <Spinner
+                android:id="@+id/branches_spinner"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                android:entries="@array/branches_array"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/shortz_grey"
+                android:text="Mobile Number"
+                android:layout_marginTop="17dp"/>
+
+            <EditText
+                android:id="@+id/entered_new_email"
+                style="@style/edit_text_style"
+                android:layout_width="210dp"
+                android:layout_alignParentRight="true"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColorHint="@color/hint_grey"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/shortz_grey"
+                android:text="Preferred Tags"
+                android:layout_marginTop="17dp"/>
+
+            <EditText
+                android:id="@+id/entered_new_email"
+                style="@style/edit_text_style"
+                android:layout_width="210dp"
+                android:layout_height="82dp"
+                android:layout_alignParentRight="true"
+                android:hint="Tags"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/hint_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/shortz_grey"
+                android:text="Password"
+                android:layout_marginTop="24dp"/>
+
+            <Button
+                android:id="@+id/change_password_button"
+                style="@style/grey_button_style"
+                android:layout_alignParentRight="true"
+                android:text="@string/change_passoword_string"
+                android:padding="5dp"
+                android:layout_gravity="right"/>
+
+        </RelativeLayout>
+
+
+        <Button
+            style="@style/regular_button_style"
+            android:text="@string/update_profile_string"
+            android:id="@+id/update_profile_button"
+            android:padding="4dp"/>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
